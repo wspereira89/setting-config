@@ -1,7 +1,7 @@
 server.port: 8300
 spring:
     config.use-legacy-processing: true  
-    application.name: eureka-server-service
+    application.name: eureka-server
 eureka:
   instance:
     hostname: localhost
