@@ -1,0 +1,15 @@
+server.port: 8300
+spring:
+    config.use-legacy-processing: true  
+    application.name: eureka-server-service
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    enableSelfPreservation: false
+    waitTimeInMsWhenSyncEmpty : 0
