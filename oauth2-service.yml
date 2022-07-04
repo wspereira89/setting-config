@@ -1,0 +1,12 @@
+server.port: ${PORT:0}
+spring:
+  #nombre de la aplicacion con que se registrara en eureka
+  application:
+    name: oauth2-service
+eureka:
+  #donde esta ubicado nuestro servicio eureka para registrarse y descubrimiento
+  client:
+    service-url.defaultZone: http://localhost:8300/eureka
+    
+  #creando una intancia randon en eureka por cada instancia levantada
+  instance.instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}       
